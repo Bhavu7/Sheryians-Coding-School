@@ -9,12 +9,14 @@
   <body class="h-screen bg-gray-100 items-center justify-center flex flex-col">
     <h1 class="text-center mt-10 font-bold text-3xl uppercase">Random Color Generator</h1>
     <div class="justify-center flex flex-col gap-6 items-center mt-10">
-      <div id="colorDisplay" class="h-48 w-48 bg-gray-300 rounded-xl"></div>
+      <div id="colorDisplay" class="h-64 w-64 bg-gray-300 rounded-xl flex items-center justify-center">
+        <p id="colorCode" class="font-semibold"></p>
+      </div>
       <button
         id="generateNewColor"
         class="p-4 bg-blue-500 rounded-2xl hover:bg-blue-600 text-white transition"
       >
-        Change
+        Generate Random Color
       </button>
     </div>
     <script src="script.js"></script>
