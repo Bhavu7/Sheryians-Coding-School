@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Color Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="h-screen bg-gray-100 items-center justify-center flex flex-col">
+    <h1 class="text-center mt-10 font-bold text-3xl uppercase">
+      Guessing Game
+    </h1>
+    <div class="justify-center flex flex-col gap-6 items-center mt-10">
+      <div
+        id="colorDisplay"
+        class="h-64 w-64 bg-gray-300 rounded-xl flex flex-col gap-6 p-10 items-center justify-center"
+      >
+        <p id="teamName" class="font-semibold"></p>
+        <p id="playerName" class="font-semibold"></p>
+      </div>
+      <button
+        id="guessTeam"
+        class="p-4 bg-blue-500 rounded-2xl hover:bg-blue-600 text-white transition"
+      >
+        Guess
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
