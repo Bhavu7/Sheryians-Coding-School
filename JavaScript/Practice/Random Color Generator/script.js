@@ -2,10 +2,10 @@ var btn = document.querySelector("button");
 var colorDisplay = document.querySelector("#colorDisplay");
 var colorCode = document.querySelector("#colorCode");
 
-colorDisplay.addEventListener("click", function () {
-  navigator.clipboard.writeText(colorCode.textContent);
-  alert("Color code copied to clipboard: " + colorCode.textContent);
-});
+// colorDisplay.addEventListener("click", function () {
+//   navigator.clipboard.writeText(colorCode.textContent);
+//   alert("Color code copied to clipboard: " + colorCode.textContent);
+// });
 
 btn.addEventListener("click", function () {
   let redColor = Math.floor(Math.random() * 256);
