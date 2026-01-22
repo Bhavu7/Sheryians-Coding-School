@@ -12,5 +12,5 @@ image.addEventListener("mouseleave", function () {
 
 box.addEventListener("mousemove", function (ele) {
   msg.innerHTML = "Moving...";
-  console.log(ele);
+  console.log(ele.x, " ", ele.y);
 });
