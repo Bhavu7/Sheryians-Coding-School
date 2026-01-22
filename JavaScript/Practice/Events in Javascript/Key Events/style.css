@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keys-info{
+    background-color: rgba(174, 174, 174, 0.396);
+    width: fit-content;
+    padding: 20px 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+h1{
+    font-size: 8rem;
+}
