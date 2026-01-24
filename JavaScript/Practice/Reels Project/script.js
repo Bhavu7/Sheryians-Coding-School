@@ -3,7 +3,7 @@ const reels = [
     username: "chicku_x",
     profileImage:
       "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200",
-    description: "Every brother’s attitude after using sister’s skincare 😌",
+    description: "Every brother’s attitude after using sister’s skincare",
     isLiked: true,
     isFollowing: true,
     likes: 842,
@@ -15,7 +15,7 @@ const reels = [
     username: "travel_guy",
     profileImage:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200",
-    description: "POV: you finally took that solo trip 🌍",
+    description: "POV: you finally took that solo trip",
     isLiked: false,
     isFollowing: false,
     likes: 1203,
@@ -27,7 +27,7 @@ const reels = [
     username: "foodie_diaries",
     profileImage:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200",
-    description: "When the street food hits different 🤤",
+    description: "When the street food hits different",
     isLiked: true,
     isFollowing: false,
     likes: 967,
@@ -39,7 +39,7 @@ const reels = [
     username: "gym_motivation",
     profileImage:
       "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200",
-    description: "Day 1 or one day. Choose wisely 💪",
+    description: "Day 1 or one day. Choose wisely",
     isLiked: false,
     isFollowing: true,
     likes: 2310,
@@ -51,7 +51,7 @@ const reels = [
     username: "aesthetic_vibes",
     profileImage:
       "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=200",
-    description: "Soft lights, calm mind, late night thoughts ✨",
+    description: "Soft lights, calm mind, late night thoughts",
     isLiked: true,
     isFollowing: true,
     likes: 1544,
