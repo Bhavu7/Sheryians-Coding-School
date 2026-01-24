@@ -37,7 +37,7 @@ body {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     object-fit: cover;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 .reels video {
