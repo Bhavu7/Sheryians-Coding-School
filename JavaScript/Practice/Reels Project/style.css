@@ -18,10 +18,16 @@ body {
     height: 640px;
     background: #000;
     position: relative;
-    overflow: hidden;
     border-radius: 16px;
+    overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.reels-container::-webkit-scrollbar {
+    display: none;
 }
 
 .reels {
@@ -37,7 +43,7 @@ body {
 .reels video {
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
 }
 
 /* Bottom section */
@@ -78,7 +84,7 @@ body {
     border: 1px solid #fff;
     padding: 3px 8px;
     border-radius: 6px;
-    margin-left: auto;
+    /* margin-left: auto; */
     cursor: pointer;
 }
 
@@ -126,4 +132,15 @@ body {
 .profile-info h4:hover {
     background: #fff;
     color: #000;
+}
+
+.like.active svg {
+  fill: red;
+  stroke: red;
+}
+
+.profile-info h4.following {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
 }
