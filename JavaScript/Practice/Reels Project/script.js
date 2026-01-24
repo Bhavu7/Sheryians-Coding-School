@@ -9,7 +9,7 @@ const reels = [
     likes: 842,
     comments: 37,
     shares: 12,
-    video: "./videos/reel2.mp4",
+    video: "videos/reel2.mp4",
   },
   {
     username: "travel_guy",
@@ -21,7 +21,7 @@ const reels = [
     likes: 1203,
     comments: 94,
     shares: 41,
-    video: "./videos/reel3.mp4",
+    video: "videos/reel3.mp4",
   },
   {
     username: "foodie_diaries",
@@ -33,7 +33,7 @@ const reels = [
     likes: 967,
     comments: 58,
     shares: 22,
-    video: "./videos/reel4.mp4",
+    video: "videos/reel4.mp4",
   },
   {
     username: "gym_motivation",
@@ -45,7 +45,7 @@ const reels = [
     likes: 2310,
     comments: 143,
     shares: 87,
-    video: "./videos/reel5.mp4",
+    video: "videos/reel5.mp4",
   },
   {
     username: "aesthetic_vibes",
@@ -57,7 +57,7 @@ const reels = [
     likes: 1544,
     comments: 76,
     shares: 39,
-    video: "./videos/reel6.mp4",
+    video: "videos/reel6.mp4",
   },
 ];
 
