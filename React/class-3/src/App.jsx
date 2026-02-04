@@ -10,11 +10,14 @@ function App() {
       {/* render as a function */}
       {/* {Card(10,20)} */}
       {/* render as a component */}
-      {/* <Card /> */}
+      <Card user='Bhavesh' age={21}/>
+      <Card user='Harsh' age={21}/>
+      <Card user='Dev' age={21}/>
+      <Card user='Bhavu' age={21}/>
       {/* {<Card />} */}
       
-      <Cards cardName="Bhavesh" />
-      <Cards cardName="Bhavu" />
+      {/* <Cards cardName="Bhavesh" />
+      <Cards cardName="Bhavu" /> */}
       {/* {Cards('Bhavesh')}
       {Cards('Bhavu')} */}
     </div>
