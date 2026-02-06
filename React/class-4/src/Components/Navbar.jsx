@@ -1,7 +1,7 @@
 import React from "react";
 
-const Navbar = () => {
-  const links = ["Home", "About", "Contact", "FAQs"];
+const Navbar = (props) => {
+//   const links = ["Home", "About", "Contact", "FAQs"];
 
   return (
     <div className="flex items-center justify-around bg-black p-4 select-none">
@@ -9,7 +9,7 @@ const Navbar = () => {
         React
       </div>
       <div className="flex items-center justify-center text-gray-400 font-semibold gap-10">
-        {links.map(function (link) {
+        {props.name.map(function (link) {
           return (
             <h1 className="active:scale-95 cursor-pointer hover:text-gray-200">
               {link}
