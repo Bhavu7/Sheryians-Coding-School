@@ -9,6 +9,7 @@ const Navbar = (props) => {
         React
       </div>
       <div className="flex items-center justify-center text-gray-400 font-semibold gap-10">
+        {/* {props.map(function (link) { */}
         {props.name.map(function (link) {
           return (
             <h1 className="active:scale-95 cursor-pointer hover:text-gray-200">
