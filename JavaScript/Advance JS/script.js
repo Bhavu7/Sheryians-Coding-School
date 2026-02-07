@@ -6,8 +6,6 @@ let user = {
   gender: "male",
 };
 
-console.log(user);
-
 // Classes
 // Classes returns new objects everytime
 // Constructor - a function which is called automatically when instance is created using class
@@ -44,17 +42,18 @@ class Book {
     this.bookPrice = bPrice;
     this.color = bColor;
   }
-
-  nextPage() {
-    console.log("Page Changed To Next!");
-  }
-  pauseReadingBook() {
-    console.log("Book Paused!");
-  }
-  previousPage() {
-    console.log("Page Changed To Previous!");
-  }
 }
+
+// Prototype - Shared Memory
+Book.prototype.nextPage = function () {
+  console.log("Page Changed To Next!");
+};
+Book.prototype.pauseReadingBook = function () {
+  console.log("Book Paused!");
+};
+Book.prototype.previousPage = function () {
+  console.log("Page Changed To Previous!");
+};
 
 let book = new Book(
   "The Power Of Your SubConcious Mind",
