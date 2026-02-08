@@ -61,3 +61,21 @@ let book = new Book(
   1.5 + "$",
   "OffWhite",
 );
+
+// Class Expression
+
+let Food = class {
+  name = "Paneer";
+  price = 1 + "$";
+};
+
+let Paneer = new Food();
+
+// Hoisting
+
+let Paneer1 = new Food1();
+
+let Food1 = class {
+  name = "Paneer";
+  price = 1 + "$";
+};
