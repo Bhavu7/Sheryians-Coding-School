@@ -195,3 +195,9 @@ let car1 = new Car("BMW", 250);
 let car2 = new Car("Bugatti", 380);
 
 // Q5
+// Constructor function without using class
+
+function fnc(){
+  this.name = 'User'
+}
+let func = new fnc();
