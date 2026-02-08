@@ -133,3 +133,65 @@ class Person {
 let P = new Person();
 
 P.newAge = 22;
+
+// Solving Questions
+
+// Q1
+let user1 = {
+  name: "In Person",
+  email: "user@user.user",
+  login: function () {
+    console.log("User Logged In!");
+  },
+};
+
+user1.login();
+
+// Q2
+class Users {
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
+
+  login() {
+    console.log(`${this.name}Logged In!`);
+  }
+}
+
+let User1Login = new Users("harsh", "harsh@harsh.com");
+let User2Login = new Users("het", "het@het.com");
+let User3Login = new Users("meet", "meet@meet.com");
+// let users = [User1Login, User2Login, User3Login];
+
+// users.forEach((user) => user.login());
+
+// Q3
+
+let Product = {
+  name: "Keyboard",
+  price: 1200,
+  discountedPrice: function () {
+    return this.price - 120;
+  },
+};
+
+console.log(Product.discountedPrice());
+
+// Q4
+
+class Car {
+  constructor(brand, speed) {
+    this.brand = brand;
+    this.speed = speed;
+  }
+
+  drive() {
+    return this.brand + " - " + this.speed;
+  }
+}
+
+let car1 = new Car("BMW", 250);
+let car2 = new Car("Bugatti", 380);
+
+// Q5
