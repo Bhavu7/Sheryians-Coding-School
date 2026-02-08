@@ -73,9 +73,63 @@ let Paneer = new Food();
 
 // Hoisting
 
-let Paneer1 = new Food1();
+// let Paneer1 = new Food1();
 
-let Food1 = class {
-  name = "Paneer";
-  price = 1 + "$";
-};
+// let Food1 = class {
+//   name = "Paneer";
+//   price = 1 + "$";
+// };
+
+// Inheritance
+
+class Animal {
+  constructor() {
+    this.hands = 2;
+    this.legs = 2;
+  }
+
+  eat() {}
+  breathe() {}
+}
+
+class kekda extends Animal {
+  constructor() {
+    super();
+    this.hands = 0;
+    this.legs = 8;
+  }
+
+  bite() {}
+}
+
+let k1 = new kekda();
+
+// Getter & Setter Methods
+
+class Person {
+  constructor() {
+    // (_age)treated as a private variable
+    this._age = 21;
+  }
+
+  // Getter Method
+  get age() {
+    return this._age;
+  }
+
+  // Setter Method - needs 1 parameter
+  set newAge(val) {
+    if (val < 0) {
+      console.error("Age Must Be Above 0!");
+      return;
+    }
+    // if doesn't return anything, it'll retun something
+    this._age = val;
+    // returning newAge
+    return this._age;
+  }
+}
+
+let P = new Person();
+
+P.newAge = 22;
