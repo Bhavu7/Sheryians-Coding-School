@@ -13,4 +13,7 @@ try {
   console.error(err.name);
   // complete error message
   console.error(err.stack);
+  // Executes Everytime
+} finally {
+  console.log("Error Handled!!!");
 }
