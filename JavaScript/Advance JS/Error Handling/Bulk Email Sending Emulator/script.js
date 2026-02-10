@@ -15,5 +15,26 @@ function sendEmail(email) {
 }
 
 sendEmail("user@user.com")
-  .then((data) => console.log(data))
-  .then((err) => console.error(err));
+  .then(function (data) {
+    console.log(data);
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
+
+async function sendEmails(userList) {
+  let responses = userList.map(function (email) {
+    return sendEmail(email)
+      .then(function (data) {
+        return data;
+      })
+      .catch(function (err) {
+        return err;
+      });
+  });
+  let ans = await Promise.all(responses);
+  ans.forEach(function (status) {
+    console.log(status);
+  });
+}
+sendEmails(users);
