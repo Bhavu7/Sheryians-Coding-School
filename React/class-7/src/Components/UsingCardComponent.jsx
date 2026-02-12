@@ -36,17 +36,19 @@ const UsingCardComponent = () => {
     setAllUsers(usersCopy);
   };
   return (
-    <div className="h-full bg-black text-white">
-      <h1 className="text-3xl text-center">Form</h1>
+    <div className="min-h-screen bg-black text-white px-6 py-10">
+      <h1 className="text-4xl font-bold text-center mb-10 tracking-wide">
+        Create Users
+      </h1>
 
       <form
-        className="flex flex-wrap p-2 justify-center"
+        className="max-w-4xl mx-auto bg-zinc-900 p-8 rounded-2xl shadow-2xl flex flex-wrap justify-between gap-4"
         onSubmit={(e) => {
           formHandler(e);
         }}
       >
         <input
-          className="border-2 px-5 py-2 rounded m-2 w-[45%] outline-none"
+          className="bg-black border border-zinc-700 px-5 py-3 rounded-lg w-[48%] outline-none focus:border-emerald-500 transition"
           type="text"
           placeholder="Enter Your Name"
           value={userName}
@@ -54,8 +56,9 @@ const UsingCardComponent = () => {
             setUserName(e.target.value);
           }}
         />
+
         <input
-          className="border-2 px-5 py-2 rounded m-2 w-[45%] outline-none"
+          className="bg-black border border-zinc-700 px-5 py-3 rounded-lg w-[48%] outline-none focus:border-emerald-500 transition"
           type="text"
           placeholder="Enter Role"
           value={userRole}
@@ -63,8 +66,9 @@ const UsingCardComponent = () => {
             setUserRole(e.target.value);
           }}
         />
+
         <input
-          className="border-2 px-5 py-2 rounded m-2 w-[45%] outline-none"
+          className="bg-black border border-zinc-700 px-5 py-3 rounded-lg w-[48%] outline-none focus:border-emerald-500 transition"
           type="text"
           placeholder="Enter Description"
           value={userDescription}
@@ -72,8 +76,9 @@ const UsingCardComponent = () => {
             setUserDescription(e.target.value);
           }}
         />
+
         <input
-          className="border-2 px-5 py-2 rounded m-2 w-[45%] outline-none"
+          className="bg-black border border-zinc-700 px-5 py-3 rounded-lg w-[48%] outline-none focus:border-emerald-500 transition"
           type="text"
           placeholder="Image URL"
           value={userImageURL}
@@ -81,14 +86,17 @@ const UsingCardComponent = () => {
             setUserImageURL(e.target.value);
           }}
         />
+
         <button
-          className="border-2 px-5 py-2 rounded m-2 w-[91%] outline-none bg-emerald-500 active:scale-95"
+          className="w-full mt-4 bg-emerald-500 hover:bg-emerald-600 transition-all duration-100 px-6 py-3 rounded-lg font-semibold cursor-pointer active:translate-y-0.75 active:translate-x-0.75"
+          disabled={!userName || !userRole || !userDescription || !userImageURL}
           type="submit"
         >
           Create User
         </button>
       </form>
-      <div className="flex flex-wrap p-20 gap-10">
+
+      <div className="flex flex-wrap justify-center mt-16 gap-10">
         {allUsers.map((elem, index) => {
           return (
             <Card

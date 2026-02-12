@@ -2,28 +2,30 @@ const Card = (props) => {
   return (
     <div
       key={props.index}
-      className="w-[20vw] h-fit bg-white p-5 rounded-xl flex items-center flex-col text-justify"
+      className="w-70 bg-zinc-900 border border-zinc-800 p-6 rounded-2xl flex items-center flex-col text-center shadow-lg hover:shadow-emerald-500/10 transition duration-300"
     >
       <img
-        className="h-30 w-30 rounded-full object-center object-cover"
+        className="h-28 w-28 rounded-full object-cover border-4 border-emerald-500"
         src={props.elem.userImageURL}
         alt="USer Image"
       />
-      <h1 className="text-xl font-bold mt-4 text-black">
+
+      <h1 className="text-xl font-bold mt-4 text-white">
         {props.elem.userName}
       </h1>
-      <h4 className="text-base text-emerald-500 font-semibold my-3">
+
+      <h4 className="text-sm text-emerald-400 font-semibold mt-1">
         {props.elem.userRole}
       </h4>
-      <p className="text-small font-medium text-gray-800">
-        {props.elem.userDescription}
-      </p>
+
+      <p className="text-sm text-zinc-400 mt-3">{props.elem.userDescription}</p>
+
       <button
         onClick={() => {
           // card wala index pass kiya hai
           props.deleteHandler(props.index);
         }}
-        className="px-4 py-2 bg-red-500 mt-3 cursor-pointer font-semibold active:scale-95 rounded-md"
+        className="mt-5 px-5 py-2 bg-red-500 hover:bg-red-600 transition rounded-lg font-semibold active:scale-95"
       >
         Remove
       </button>
