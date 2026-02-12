@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Card from "./Card";
 
 const Form = () => {
   const [userName, setUserName] = useState("");
@@ -12,11 +11,14 @@ const Form = () => {
   const formHandler = (e) => {
     e.preventDefault();
 
-    const oldUsers = [...allUsers];
-    oldUsers.push({ userName, userRole, userDescription, userImageURL });
-    setAllUsers(oldUsers);
+    // const oldUsers = [...allUsers];
+    // oldUsers.push({ userName, userRole, userDescription, userImageURL });
+    setAllUsers([
+      ...allUsers,
+      { userName, userRole, userDescription, userImageURL },
+    ]);
 
-    console.log(oldUsers);
+    // console.log(oldUsers);
 
     setUserName("");
     setUserRole("");
@@ -25,8 +27,15 @@ const Form = () => {
 
     console.log(userName, userRole, userDescription, userImageURL);
   };
+
+  const deleteHandler = (index) => {
+    const usersCopy = [...allUsers];
+    usersCopy.splice(index, 1);
+
+    setAllUsers(usersCopy);
+  };
   return (
-    <div className="h-fit bg-black text-white">
+    <div className="h-full bg-black text-white">
       <h1 className="text-3xl text-center">Form</h1>
 
       <form
@@ -79,24 +88,37 @@ const Form = () => {
         </button>
       </form>
       <div className="flex flex-wrap p-20 gap-10">
-        {allUsers.map((elem, index)=>{
-            return <div key={index} className="w-[20vw] h-fit bg-white text-white p-5 rounded-xl flex items-center flex-col text-justify">
-      <img
-        className="h-30 w-30 rounded-full object-center object-cover"
-        src={elem.userImageURL}
-        alt="USer Image"
-      />
-      <h1 className="text-xl font-bold mt-4 text-black">{elem.userName}</h1>
-      <h4 className="text-base text-emerald-500 font-semibold my-3">
-        {elem.userRole}
-      </h4>
-      <p className="text-small font-medium text-gray-800">
-        {elem.userDescription}
-      </p>
-      <button className="px-4 py-2 bg-red-500 mt-3 cursor-pointer font-semibold active:scale-95 rounded-md">
-        Remove
-      </button>
-    </div>
+        {allUsers.map((elem, index) => {
+          return (
+            <div
+              key={index}
+              className="w-[20vw] h-fit bg-white text-white p-5 rounded-xl flex items-center flex-col text-justify"
+            >
+              <img
+                className="h-30 w-30 rounded-full object-center object-cover"
+                src={elem.userImageURL}
+                alt="USer Image"
+              />
+              <h1 className="text-xl font-bold mt-4 text-black">
+                {elem.userName}
+              </h1>
+              <h4 className="text-base text-emerald-500 font-semibold my-3">
+                {elem.userRole}
+              </h4>
+              <p className="text-small font-medium text-gray-800">
+                {elem.userDescription}
+              </p>
+              <button
+                onClick={() => {
+                  // card wala index pass kiya hai
+                  deleteHandler(index);
+                }}
+                className="px-4 py-2 bg-red-500 mt-3 cursor-pointer font-semibold active:scale-95 rounded-md"
+              >
+                Remove
+              </button>
+            </div>
+          );
         })}
       </div>
     </div>
