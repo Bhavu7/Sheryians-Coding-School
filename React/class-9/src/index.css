@@ -9,7 +9,7 @@
 
 .app {
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: #000;
     padding: 40px 20px;
     text-align: center;
 }
@@ -28,7 +28,7 @@
     border: none;
     border-radius: 30px;
     background: white;
-    color: #764ba2;
+    color: green;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 600;
@@ -53,7 +53,6 @@
 }
 
 .card {
-    background: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -66,8 +65,9 @@
 }
 
 .card-id {
-    color: #764ba2;
+    color: green;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .card p {
@@ -77,5 +77,5 @@
 
 .card span {
     font-weight: 600;
-    color: #555;
+    color: #000;
 }
