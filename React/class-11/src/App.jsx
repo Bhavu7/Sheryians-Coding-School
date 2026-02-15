@@ -30,6 +30,9 @@ const App = () => {
         {/* Nested Dynamic Routes */}
         <Route path="/courses/:courseId" element={<SomeCourses />} />
         <Route path="/courses/:courseId/details" element={<CourseDetails />} />
+
+        {/* Not Found Page */}
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </div>
   );
