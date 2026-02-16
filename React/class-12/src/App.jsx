@@ -1,8 +1,8 @@
 import {
   Routes,
   Route,
-  createBrowserRouter,
-  RouterProvider,
+  // createBrowserRouter,
+  // RouterProvider,
 } from "react-router-dom";
 import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
@@ -11,46 +11,46 @@ import Courses from "./Pages/Courses";
 import Koder from "./Pages/Koder";
 import Kodex from "./Pages/Kodex";
 import Footer from "./Components/Footer";
-import { Children } from "react";
+// import { Children } from "react";
 
 function App() {
-  const allRoutes = createBrowserRouter(
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/about",
-      element: <About />,
-    },
-    {
-      path: "/courses",
-      element: <Courses />,
-      Children: [
-        {
-          path: "koder",
-          element: <Koder />,
-        },
-        {
-          path: "kodex",
-          element: <Kodex />,
-        },
-      ],
-    },
-  );
+  // const allRoutes = createBrowserRouter(
+  //   {
+  //     path: "/",
+  //     element: <Home />,
+  //   },
+  //   {
+  //     path: "/about",
+  //     element: <About />,
+  //   },
+  //   {
+  //     path: "/courses",
+  //     element: <Courses />,
+  //     Children: [
+  //       {
+  //         path: "koder",
+  //         element: <Koder />,
+  //       },
+  //       {
+  //         path: "kodex",
+  //         element: <Kodex />,
+  //       },
+  //     ],
+  //   },
+  // );
   return (
     <div>
       <Navbar />
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />}>
           <Route path="/courses/koder" element={<Koder />} />
           <Route path="/courses/kodex" element={<Kodex />} />
         </Route>
-      </Routes> */}
+      </Routes>
 
-      <RouterProvider router={allRoutes} />
+      {/* <RouterProvider router={allRoutes} /> */}
       <Footer />
     </div>
   );
