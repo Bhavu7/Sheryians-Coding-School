@@ -14,7 +14,7 @@ body {
 .nav{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: rgb(32, 134, 218);
   padding: 20px;
 }
